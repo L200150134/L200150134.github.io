@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adding Marker</title>
+    <style>
+       #map {
+        height: 620px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <center><h2>My HOME</h2></center>
+    <div id="map"></div>
+    <script>
+      var marker;
+
+      function initMap() {
+        var myHome = {lat: -7.523970, lng: 110.985337};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: myHome
+        });
+
+        marker = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.BOUNCE,
+          position: myHome
+        });
+      }
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAVKQzy6ENU4mGF3W7iW16CG2HrXnf1Us&callback=initMap">
+    </script>
+  </body>
+</html>
