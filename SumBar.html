@@ -72,7 +72,7 @@
           event.feature.setProperty('isColorful', true);  
         });
         map.data.addListener('mouseover', function(event) {
-          map.data.revertStyle();
+          map.data.revertStyle(); 
           map.data.overrideStyle(event.feature, {fillColor: 'white', strokeColor: 'black', strokeWeight: 3});
         });
         map.data.addListener('mouseout', function(event) {
